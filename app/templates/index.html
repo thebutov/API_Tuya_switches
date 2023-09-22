@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Управление устройством</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h3>Управление устройством</h3>
+    <button style="background-color: {{ button_color[0] }}" onclick="callMethod('/powercontrol?device_name=switch01&action=on')">ВКЛ  Реле 1</button>
+    <button style="background-color: {{ button_color[1] }}" onclick="callMethod('/powercontrol?device_name=switch02&action=on')">ВКЛ  Реле 2</button>
+    <button style="background-color: {{ button_color[2] }}" onclick="callMethod('/powercontrol?device_name=switch03&action=on')">ВКЛ  Реле 3</button>
+    <button style="background-color: {{ button_color[3] }}" onclick="callMethod('/powercontrol?device_name=switch04&action=on')">ВКЛ  Реле 4</button>
+
+    <div style="margin-top: 20px;">
+    <button style="background-color: {{ button_color[0] }}" onclick="callMethod('/powercontrol?device_name=switch01&action=off')">ВЫКЛ Реле 1</button>
+    <button style="background-color: {{ button_color[1] }}" onclick="callMethod('/powercontrol?device_name=switch02&action=off')">ВЫКЛ Реле 2</button>
+    <button style="background-color: {{ button_color[2] }}" onclick="callMethod('/powercontrol?device_name=switch03&action=off')">ВЫКЛ Реле 3</button>
+    <button style="background-color: {{ button_color[3] }}" onclick="callMethod('/powercontrol?device_name=switch04&action=off')">ВЫКЛ Реле 4</button>
+    </div>
+
+    <div style="margin-top: 20px;">
+    <button onclick="callMethod('/poweron_all')">ВКЛ ВСЁ</button>
+    <button onclick="callMethod('/poweroff_all')">ВЫКЛ ВСЁ</button>
+    <button onclick="callMethod('/open_the_door')">Дверь</button>
+    <button onclick="callMethod('/door_and_light')">Дверь Свет</button>
+
+    </div>
+
+
+    <script>
+        function callMethod(url) {
+            fetch(url, {
+                headers: {
+                    'user': 'dashboard'
+                }
+            });
+        }
+    </script>
+
+    <style>
+        .yellow {
+            background-color: yellow;
+        }
+
+        .default {
+            background-color: default; /* Or the default color you want */
+        }
+
+        /* Add more styles as needed */
+    </style>
+
+
+</body>
+</html>

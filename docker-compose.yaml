@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    container_name: power_control
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=0
+      - PYTHONUNBUFFERED=True
+    restart: always
+    command: python main.py
+    networks:
+      - powercontrol_network
+
+networks:
+  powercontrol_network:
+    driver: bridge
