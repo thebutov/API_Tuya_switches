@@ -1,0 +1,30 @@
+- id: dvor_light
+  name: Свет во дворе
+  description: Свет во дворе
+  room: Двор
+  type: devices.types.light
+  custom_data:
+  capabilities:
+  - type: devices.capabilities.on_off
+    retrievable: true
+    parameters:
+    hooks:
+      on:
+        url: {URL APP}
+        method: POST
+        json:
+          area_id: dvor
+        headers:
+          user: {USER}
+      off:
+        url: {URL APP}
+        method: POST
+        json:
+          area_id: dvor
+        headers:
+          user: {USER}
+  device_info:
+    manufactorer: HomeAssistant
+    model: Virtual
+    hw_version: 0.1
+    sw_version: 0.1

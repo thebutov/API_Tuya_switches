@@ -6,13 +6,16 @@ load_dotenv()
 list_onoff = {'on': True,
               'off': False}
 
-devices = ['switch01', 'switch02', 'switch03', 'switch04']
+devices = ['switch01', 'switch02', 'switch03', 'switch04', 'switch05']
 actions = ['on', 'off', 'change']
 
 list_devices = {'switch01': 'bfc1b9861a3b9f7d9ferdr',
                 'switch02': 'bfc4e907b416cef521c51p',
                 'switch03': 'bf888d69c60b557b48zb0q',
-                'switch04': 'bfa7b1015c843530b2apqm'}
+                'switch04': 'bfa7b1015c843530b2apqm',
+                'switch05': 'bfa8c777902f8c4973911h'}
+
+
 
 users = os.getenv('USERS')
 

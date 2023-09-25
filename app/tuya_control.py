@@ -13,8 +13,7 @@ tcc = tuyacloud.TuyaCloudClientNicer(
 def changedevicestate_error(params=None, path=None, response_tuyacloud=None):
     print('\n')
     print(datetime.now(), response_tuyacloud)
-    tg_msg_source = str(datetime.now()) + '\n\n' + str(params) + '\n\n' + str(path) + '\n\n' + str(response_tuyacloud)
-    bot.send_message(chat_id, tg_msg_source)
+    tg_msg_source = str(datetime.now()) + '\n\n' + str(params) + '\n\n' + str(path) + '\n\n' + str(response_tuyacloud)    bot.send_message(chat_id, tg_msg_source)
     print(datetime.now(), f"Ошибка какая-то")
 
 
@@ -94,5 +93,3 @@ print('==================================\n')
 tg_msg_source = str(datetime.now()) + '\n✳️ Сервер управления светом запущен'
 print('\n==============\n', tg_msg_source, '\n==============\n')
 bot.send_message(chat_id, tg_msg_source)
-
-
