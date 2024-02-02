@@ -54,7 +54,7 @@ def methods_door_and_light():
     return methods.door_and_light()
 
 
-
+#test
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
 
