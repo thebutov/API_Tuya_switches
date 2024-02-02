@@ -70,11 +70,14 @@ def device_powercontrol(device_name=None, action=None, user='default', silent_no
 def device_getpowerstatus(device_name):
     device_uuid = list_devices.get(device_name)
     exec_result = tcc.get_device_status(device_uuid)
+    print(exec_result)
     for entry in exec_result:
-        if entry["code"] == "switch_1":
-            print(device_uuid, entry["value"])
+        # print(device_uuid, entry["value"])
+        print(device_uuid)
+        # if entry["code"] == "switch_1":
+            # print(device_uuid, entry["value"])
             # print(entry["value"])
-            break
+            # break
 
     return exec_result
     # print(device_uuid, exec_result)
@@ -85,9 +88,13 @@ def device_getpowerstatus(device_name):
 print('\n\n==================================')
 print(str(datetime.now()))
 print('НАЧАЛЬНАЯ ПРОВЕРКА СТАТУСОВ РЕЛЕ:')
+print('111111111111111111')
 device_getpowerstatus('switch01')
+print('22222222222222222222')
 device_getpowerstatus('switch02')
+print('33333333333333333333333333')
 device_getpowerstatus('switch03')
+print('4444444444444444444444')
 device_getpowerstatus('switch04')
 print('==================================\n')
 

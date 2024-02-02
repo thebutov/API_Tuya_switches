@@ -17,6 +17,13 @@ list_devices = {'switch01': 'bfc1b9861a3b9f7d9ferdr',
 
 
 
+# list_devices = {'switch01': 'bfc1b9861a3b9f7d9ferdr', угол
+#                 'switch02': 'bfc4e907b416cef521c51p',
+#                 'switch03': 'bf888d69c60b557b48zb0q',  бабушка
+#                 'switch04': 'bfa7b1015c843530b2apqm',  на доме
+#                 'switch05': 'bfa8c777902f8c4973911h'}  на столбе
+
+
 users = os.getenv('USERS')
 
 door_url       = os.getenv('door_url')
